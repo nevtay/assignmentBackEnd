@@ -8,8 +8,8 @@ app.use(express.json())
 
 const createRoute = require('./routes/create.route')
 const readRoute = require('./routes/todos.route')
-const updateRoute = require('./routes/update.route')
-const deleteRoute = require('./routes/delete.route')
+// const updateRoute = require('./routes/update.route')
+// const deleteRoute = require('./routes/delete.route')
 
 app.get('/', (req, res) => {
   res.send(
