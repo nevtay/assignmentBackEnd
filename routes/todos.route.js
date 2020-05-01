@@ -4,7 +4,6 @@ const Todo = require('../models/Todo.model')
 
 router.get('/', async (req, res) => {
   const allTodos = await Todo.find()
-  console.log(allTodos)
   try {
     res
       .status(200)
