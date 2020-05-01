@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
 const todoSchema = mongoose.Schema(
   {
-    content: {
+    label: {
       type: String,
       required: true,
       minlength: 1
     },
-    completed: {
+    done: {
       type: Boolean
     },
-    active: {
-      type: Boolean
+    id: {
+      type: String
     }
   }, {
     timestamps: {
