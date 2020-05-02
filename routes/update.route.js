@@ -3,8 +3,8 @@ const router = express.Router()
 const Todo = require('../models/Todo.model')
 
 router.post('/', async (req, res) => {
-  const { id, label } = { ...req.body }
-  Todo.findOneAndUpdate({ id: id }, { label: label }, (err, data) => {
+  const { id, label, done } = { ...req.body }
+  Todo.findOneAndUpdate({ id: id }, { label: label, done: done }, (err, data) => {
     if (err) {
       res.send(err)
     } else {
