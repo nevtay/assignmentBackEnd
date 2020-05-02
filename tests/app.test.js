@@ -9,8 +9,8 @@ describe('app.js', () => {
     expect(body.text).toEqual(
     `
         ROUTES:
-        1. GET: /add,
-        2. POST: /todos,
+        1. GET: /todos,
+        2. POST: /create,
         3. PATCH: /edit,
         4. DELETE: /delete
         `
