@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const dbUrl = 'mongodb://mongo:27017/docker-app' || process.env.MONGODB_URI
+require('dotenv').config()
+const dbUrl = process.env.MONGODB_URI
 
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
