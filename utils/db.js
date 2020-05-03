@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const dbUrl = process.env.MONGODB_URI || 'mongodb://heroku_vm5wj5fr:s7c62jutk0esh3qot9av8ascrc@ds161144.mlab.com:61144/heroku_vm5wj5fr'
+const dbUrl = 'mongodb://mongo:27017/docker-app' || process.env.MONGODB_URI
 
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
