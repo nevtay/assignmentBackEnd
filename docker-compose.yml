@@ -1,0 +1,25 @@
+services:
+    server:
+      container_name: dl-nevin-todo-server
+      restart: always
+      build: ./server
+      ports:
+        - '3010:3010'
+      volumes:
+        - ./server:/usr/src/app/server
+      links:
+        - mongo
+    client:
+      container_name: dl-nevin-todo-client
+      restart: always
+      build: ./client
+      volumes:
+        - ./client:/usr/src/app/client
+      ports:
+        - '3000:3000'
+    mongo:
+      hostname: mongo
+      restart: always
+      image: mongo
+      ports:
+        - '27017:27017'  
