@@ -4,12 +4,11 @@ const Todo = require('../models/Todo.model')
 
 router.post('/', async (req, res) => {
   const newTodo = req.body
-  console.log(newTodo)
   try {
     const saveNewTodo = new Todo(newTodo)
     await saveNewTodo.save()
     res
-      .status(200)
+      .status(201)
       .send('Todo successfully saved!')
   } catch (error) {
     res
