@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
     } else {
       res
         .status(200)
-        .send(data)
+        .send('Todo has been updated')
     }
   })
 })
