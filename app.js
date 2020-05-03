@@ -21,8 +21,8 @@ app.get('/', (req, res) => {
         ROUTES:
         1. GET: /todos,
         2. POST: /create,
-        3. PATCH: /edit,
-        4. DELETE: /delete
+        3. POST: /update,
+        4. DELETE: /delete/:todoId
         `
   )
 })
