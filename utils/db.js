@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-require('dotenv').config()
 const dbUrl = process.env.MONGODB_URI || 'mongodb://heroku_vm5wj5fr:s7c62jutk0esh3qot9av8ascrc@ds161144.mlab.com:61144/heroku_vm5wj5fr'
 
 mongoose.connect(dbUrl, {
